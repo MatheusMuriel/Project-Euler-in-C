@@ -38,10 +38,35 @@ void problem2(){
     printf("Problema 2: %d", soma);
 }
 
+/**
+ * Largest prime factor
+ * The prime factors of 13195 are 5, 7, 13 and 29.
+ * What is the largest prime factor of the number 600851475143 ?
+ */
+void problem3(){
+    int maiorFator = 0;
+    long base = 600851475143;
+    long baseAux = base;
+    for (long i = 2; i <= baseAux;) {
+        float fator = baseAux % i;
+        if(fator == 0 ){
+            baseAux = baseAux / i;
+            //printf("%d \n", i);
+            if (i > maiorFator) maiorFator = (int) i;
+        }else{
+            ++i;
+        }
+    }
+
+    printf("Problema 3: %d", maiorFator);
+}
+
+
 int main() {
     printf("Hello, World!\n");
     //problem1();
-    problem2();
+    //problem2();
+    problem3();
 
     return 0;
 }
