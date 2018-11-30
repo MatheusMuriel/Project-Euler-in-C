@@ -66,8 +66,7 @@ int main() {
     printf("Hello, World!\n");
     //problem1();
     //problem2();
-    //problem3();
-	problema4();
+    problem3();
 
     return 0;
 }
